@@ -19,10 +19,10 @@ const triviaQuestions =
 "Out of these three legends, who won the most Grand slams ?"];
 
 const triviaAnswers = 
-[["Cubs", "Indians", "Yankees"], ["Billy Horschel", "Tiger Woods", "Brooks Koepka"], 
-["Lance Armstrong", "Egan Bernal", "Geraint Thomas"], ["20", "31", "27"], 
-["Michael Schumacher", "Alain Prost", "Sebastian Vettel"], ["1996", "2007", "1986"],
-["8", "10", "12"], ["Federer", "Agassi", "Sampras"] ]
+[["Cubs"], ["Indians"], ["Yankees"], ["Billy Horschel"], ["Tiger Woods"], ["Brooks Koepka"], 
+["Lance Armstrong"], ["Egan Bernal"], ["Geraint Thomas"], ["20"], ["31"], ["27"], 
+["Michael Schumacher"], ["Alain Prost"], ["Sebastian Vettel"], ["1996"], ["2007"], ["1986"],
+["8"], ["10"], ["12"], ["Federer"], ["Agassi"], ["Sampras"] ]
 
 
 const triviaCorrectanswers =
@@ -49,16 +49,16 @@ function askQuestion () {
 function possibleAnswers () {
 
     
-    for (let answersIndex = 0; answersIndex < 8; answersIndex++) {
+    for (let answersIndex = 0; answersIndex < 24; answersIndex++) {
         
-        var answerx = $("<p>");
+        var answers = $("<button>");
    
-        answerx.attr("sportsanswers", triviaAnswers[answersIndex]);
+        answers.attr("sportsanswers", triviaAnswers[answersIndex]);
     
         
-        $("#answers").append(answerx);
+        $("#questions").append(answers);
         
-       answerx.html(triviaAnswers[answersIndex]);
+       answers.html(triviaAnswers[answersIndex]+("")+(""));
        
     }
 }
@@ -71,8 +71,8 @@ function possibleAnswers () {
 
 askQuestion();
 possibleAnswers();
-$("p").after($(".sportsquestions"));
-
+//$(".sportsanswers").after($(".sportsquestions"));
+// $(".sportsanswers").append($(".sportsquestions"));
 // function contestantScore () {
 // document.querySelector ("#score").innerHTML = "Correct answers :"+score;
 // }
