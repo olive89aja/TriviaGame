@@ -1,26 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" type="text/javascript"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script
-  src="https://code.jquery.com/jquery-3.4.1.js"
-  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-  crossorigin="anonymous"></script>
+ 
   <link rel="stylesheet" href="assets/css/style.css">
     <title>Sports Trivia game</title>
 </head>
 <body>
-    <p id="question"></p>
-        <form action="/action_page.php">
-            <input class="radio" name="string" > a1
-            <input class="radio" name="string" > a2
-            <input class="radio" name="string" > a3
-            
-          </form> 
-   <p id ="score"></p>
-   <script src="assets/javascript/game.js"></script>
+     
+   <div id=questions> </div>
+   
+   
+   <div id=answers>
+     
+
+    </div>
+
+  
     <!--
         Html
         8 paragraphes pour les questions + 8 reponses
@@ -31,9 +30,9 @@
 
         Javascript/Jquery
         
-        Let variables. 
-        questionGame
-        answerGame
+        Let variables. done fn 
+        questionGame 
+        answerGame      done
         Answer correct ->true
         False answer -> false
         counter 
@@ -46,10 +45,10 @@
 
 
         4 functions. 
-        Timer
+        Timer not done
         Ask question
         Update score
-        On click
+        On click done
 
 
 
@@ -60,5 +59,6 @@
 
 
     -->
+    <script src="assets/javascript/app.js"></script> 
 </body>
 </html>
