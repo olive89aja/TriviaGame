@@ -1,11 +1,10 @@
+
+//Initial declaration for scorePlayer
 let scorePlayer = 0;
 
 
 
-
-
-
-//Not sure if a1 a2 a3 is going to work for answers. 
+//Our Arrays hold questions, choices and correct answers
 const triviaQuest = 
 {questions: {q1:"In Baseball, who won the 2016 World Series ?", 
 q2:"In golf, who won the 2019 Masters ? ",
@@ -22,14 +21,17 @@ const triviaAnswers = {a1:["Cubs","Indians", "Yankees"],a2:["Billy Horschel", "T
 const correctAnswers =
 ["Cubs", "Tiger Woods", "Egan Bernal", "27", "Michael Schumacher", "1986", "12", "Roger Federer"]
 
+//This on click function allows us to make instructions go away
 
 $("#instructions").click(function() {
   $("#instructions").fadeOut();  
   });  
+  //We change the color of the text and create a pointer 
   $("#instructions").css("color","green");
   $("#instructions").css("cursor","pointer");
 
-
+//this function displays questions and choices. This code is too wet
+//So far my attempts to make it better via a loop or forEach have failed
 function askQuestions() {
 
 
@@ -69,13 +71,20 @@ $(".sportsanswersp").html(triviaAnswers.a8[2]);
   }
 
   askQuestions();
+  //This line ensures that after 60 seconds, the game stops
   setTimeout(function(){ alert("Time is up ! Hit F5 to play again"); }, 60000);
+
+  //Function to click on p elements, register user choices and increment score
 
 $("p").click(function() {
     $( this ).slideToggle();
     userGuess = $(this).text();
     console.log(userGuess);
     console.log(correctAnswers.indexOf(userGuess));
+
+    //When a clicked element is not in the correct answers array, the score stays the same. When 
+    // a clicked element is is the correct answers array, the score is incremented.
+
     if (correctAnswers.indexOf(userGuess) === -1)
     {
         scorePlayer;
@@ -89,6 +98,8 @@ else {
 console.log(scorePlayer);
 
 $(".score").html("Your score is: " + scorePlayer)
+
+//special instructions for a perfect score
 if (scorePlayer === 8) 
 {
 $(".score").html("YOU ARE OUR SUPER CHAMPION ! 8 good answers ! Well done!")
