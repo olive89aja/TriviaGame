@@ -85,7 +85,7 @@ else {
 }
 console.log(scorePlayer);
 
-$(".score").html(`Your score is`+""+scorePlayer)
+$(".score").html("Your score is: " + scorePlayer)
 
 
 });
