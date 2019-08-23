@@ -1,11 +1,22 @@
-button {
-  background-color: yellow;
-  display: flex; 
-  justify-content: center;
+p {
+  color:orange;
+  font-display: bold;
+  display:table-caption;
 }
 
-button:focus {
-  background-color: red;
+p:hover {
+  color:red;
 }
+
+p:active{
+  color:blue;
+}
+
+p{
+  cursor:pointer
+ }
+
+
+
 
 
