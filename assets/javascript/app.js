@@ -96,3 +96,5 @@ $(".score").html("YOU ARE OUR SUPER CHAMPION ! 8 good answers ! Well done!")
 });
 
 
+
+
