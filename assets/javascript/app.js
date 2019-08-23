@@ -69,7 +69,7 @@ $(".sportsanswersp").html(triviaAnswers.a8[2]);
   }
 
   askQuestions();
-  setTimeout(function(){ alert("Time is up ! Check out tour score at the end"); }, 120000);
+  setTimeout(function(){ alert("Time is up ! Hit F5 to play again"); }, 60000);
 
 $("p").click(function() {
     $( this ).slideToggle();
@@ -85,11 +85,14 @@ $("p").click(function() {
 else {
     scorePlayer++;
 }
+
 console.log(scorePlayer);
 
 $(".score").html("Your score is: " + scorePlayer)
-
-
+if (scorePlayer === 8) 
+{
+$(".score").html("YOU ARE OUR SUPER CHAMPION ! 8 good answers ! Well done!")
+}
 });
 
 
