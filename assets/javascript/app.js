@@ -1,8 +1,5 @@
 let scorePlayer = 0;
-// Object.defineProperty(question, 'property1', {
-//     value: "string",
-//     writable: false
-//   });
+
 
 
 
@@ -25,6 +22,12 @@ const triviaAnswers = {a1:["Cubs","Indians", "Yankees"],a2:["Billy Horschel", "T
 const correctAnswers =
 ["Cubs", "Tiger Woods", "Egan Bernal", "27", "Michael Schumacher", "1986", "12", "Roger Federer"]
 
+
+$("#instructions").click(function() {
+  $("#instructions").fadeOut();  
+  });  
+  $("#instructions").css("color","green");
+  $("#instructions").css("cursor","pointer");
 
 
 function askQuestions() {
@@ -63,12 +66,10 @@ $(".sportsanswers8").html(triviaAnswers.a8[0]);
 $(".sportsanswerso").html(triviaAnswers.a8[1]);
 $(".sportsanswersp").html(triviaAnswers.a8[2]);
 
-
   }
-  
 
-askQuestions();
-
+  askQuestions();
+  setTimeout(function(){ alert("Time is up ! Check out tour score at the end"); }, 120000);
 
 $("p").click(function() {
     $( this ).slideToggle();
@@ -78,6 +79,7 @@ $("p").click(function() {
     if (correctAnswers.indexOf(userGuess) === -1)
     {
         scorePlayer;
+        
 } 
 
 else {
@@ -90,6 +92,4 @@ $(".score").html("Your score is: " + scorePlayer)
 
 });
 
-
-  
 
