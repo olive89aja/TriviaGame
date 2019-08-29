@@ -77,7 +77,7 @@ $(".sportsanswersp").html(triviaAnswers.a8[2]);
   //Function to click on p elements, register user choices and increment score
 
 $("p").click(function() {
-    $( this ).slideToggle();
+    $(this).slideToggle();
     userGuess = $(this).text();
     console.log(userGuess);
     console.log(correctAnswers.indexOf(userGuess));
@@ -87,7 +87,7 @@ $("p").click(function() {
 
     if (correctAnswers.indexOf(userGuess) === -1)
     {
-        scorePlayer;
+        scorePlayer--;
         
 } 
 
