@@ -72,7 +72,7 @@ $(".sportsanswersp").html(triviaAnswers.a8[2]);
 
   askQuestions();
   //This line ensures that after 60 seconds, the game stops
-  setTimeout(function(){ alert("Time is up ! Hit F5 to play again"); }, 60000);
+  setTimeout(function(){ alert("Time is up ! Hit F5 to play again"); }, 90000);
 
   //Function to click on p elements, register user choices and increment score
 
